@@ -16,7 +16,7 @@ def createUser():
         'userForm' : userForm
     }
     
-    if request.method == 'POST' and userForm.validate():
+    if userForm.validate_on_submit():
         names = request.form['names']
         email = request.form['email']
         city = request.form['city']
@@ -24,11 +24,7 @@ def createUser():
         logs.saveLogs(names,email,city)
 
         userController.createUser(names,email,city)
-        return render_template('index.html', userForm = userForm)
-    else:
-        flash('Input data validate')
-        return render_template('index.html', userForm = userForm)
-        
+        return render_template('index.html', **context)        
 
 @app.route('/list_users', methods=['GET'])
 def listUsers():
