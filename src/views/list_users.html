@@ -1,0 +1,81 @@
+{% extends 'layouts/home.html' %} {% block tittle %} List {% endblock %} {% block contents %}
+<nav class="navbar navbar-expand navbar-pink bg-pink">
+    <div class="container-fluid" style="background-color: #fed6e3">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item-m">
+                    <a style="background-color: #fed6e3; color: black;font-size: 20px" class="nav-link active"
+                        href="{{url_for('createUser')}}">Create User</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<br>
+<h1 class="display-4" align="center">List Users</h1>
+<br>
+<form align="center" action="{{ url_for('listUsers') }}" method="GET">
+    <table class="table table-responsive table-bordered" style="background-color: whitesmoke" id="users" cellspacing="10px">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Names</th>
+                <th scope="col">Email</th>
+                <th scope="col">City</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for u in users %}
+                <tr>
+                <td>{{ u.id }}</td>
+                <td>{{ u.names }}</td>
+                <td>{{ u.email }}</td>
+                <td>{{ u.city }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</form>
+{% endblock %}
+
+{% block login_css %}
+
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+
+    .navbar .nav-item-l:not(:last-child) {
+
+        margin-right: 20px;
+
+    }
+
+    .navbar .nav-item-m:not(:last-child) {
+
+        margin-right: 20px;
+
+    }
+
+    .navbar .nav-item-n:not(:last-child) {
+
+        margin-left: 790px;
+        margin-right: 18px;
+
+    }
+
+    body {
+        background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+        background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+
+        font-family: 'Vibur', cursive;
+        /*   the main font */
+        font-family: 'Abel', sans-serif;
+        opacity: .95;
+        /* background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%); */
+    }
+</style>
+
+{% endblock %}

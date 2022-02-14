@@ -1,0 +1,16 @@
+Thiago Baeza thiagobaezae@gmail.com Mocoa
+Diana Rodriguez dianavara@gmail.com Amsterdan
+2022-02-12 22:48:57.188669 Camila Salgado camila@gmail.com Bucaramanga
+2022-02-12 22:50:06.372245 Thiago Baeza thiagobaezaegmail.com Bogotá
+2022-02-13 12:57:26.061851 Mathias Saet matiasaet@gmail.com Pereira
+DateNamesEmailCity
+2022-02-13 14:12:28.638418 Thiago Baeza thiagobaezae@gmail.com Bogotá
+DateNamesEmailCity
+2022-02-13 14:12:39.555080 Thiago Baeza thiagobaezae@gmail.com Mocoa
+2022-02-13 16:20:30.077535 Sara Perez sara@gmail.com Lima
+2022-02-13 16:22:24.992900   
+2022-02-13 20:31:41.332781 Thiago Baeza  
+2022-02-13 20:31:46.061253 Thiago Baeza  
+2022-02-13 21:31:44.474674 Thiago Baeza thiagobaezae@gmail.com Bogotá
+2022-02-13 21:39:19.011546 Thiago Baeza thiagobaezae@gmail.com Bogotá
+2022-02-13 21:39:53.658490 Thiago Baeza thiagobaezae@gmail.com Bogotá

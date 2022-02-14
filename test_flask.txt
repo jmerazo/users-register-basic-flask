@@ -1,0 +1,12 @@
+PRUEBA TÉCNICA DESARROLLADOR PYTHON JUNIOR
+Crear una aplicación web en Python usando el framework Flask, con los siguientes requerimientos:
+1. Desarrollar un formulario web donde se puedan registrar los siguientes campos, de un modelo
+básico de usuario.
+a. Nombre completo.
+b. Email.
+c. Ciudad.
+2. Almacenar los registros en una base de datos SQLite.
+3. Crear una vista HTML donde se vea la lista de los registros almacenados.
+4. Agregar un módulo de log, para registrar el evento de creación y guardar estos logs en un archivo
+plano.
+Plus: usar SQLAlchemy como ORM en la base de datos.
