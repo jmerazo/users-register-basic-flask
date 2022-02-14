@@ -3,12 +3,12 @@
 
 {% block contents %}
 <nav class="navbar navbar-expand navbar-pink bg-pink">
-    <div class="container-fluid" style="background-color: #fed6e3">
+    <div class="container-fluid" style="background-color: #edfcf5">
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item-m">
-                    <a style="background-color: #fed6e3; color: black;font-size: 20px" class="nav-link active"
+                    <a style="background-color: #edfcf5; color: black;font-size: 20px" class="nav-link active"
                         href="{{url_for('listUsers')}}">Users</a>
                 </li>
             </ul>
@@ -19,6 +19,7 @@
 <div class="overlay">
     <form action="{{ url_for('createUser')}} " method="POST">
         <div class="con">
+            <image src="{{url_for('static', filename='images/coink.png')}}" class="u-align-center u-expanded-width-sm u-expanded-width-xs u-image u-left-0 u-image-1">
             <header class="head-form">
                 <h1>User create</h1>
             </header>

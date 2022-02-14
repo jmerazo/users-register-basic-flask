@@ -4,6 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+flask = "*"
+flask-sqlalchemy = "*"
+flask-wtf = "*"
+wtforms = "==2.3.3"
+email-validator = "*"
 
 [dev-packages]
 
