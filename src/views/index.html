@@ -29,23 +29,27 @@
         <div class="con">            
             <header class="head-form">
                 <h1>User create</h1>
-            </header>
-            <div class="field-set">           
-                <label style="margin-right: 2rem">Names</label>
-                <input class="form-input" id="txt-input" type="text" name="names" placeholder="" required>
+            </header>           
+            <div class="field-set">
+                {{ user_form.csrf_token()}}
+                <label style="margin-right: 2rem">Names</label>{{ user_form.name(class="form-input", id="txt-input", type="text")}}<br>
+                {% for error in user_form.name.errors %}
+                    <span style="color: red;">{{ error }}</span>
+                {% endfor %}
                 <br>
-                <label style="margin-right: 2.5rem">Email</label>
-                <input class="form-input" id="txt-input" type="email" name="email" placeholder="">
+                <label style="margin-right: 2.5rem">Email</label>{{ user_form.email(class='form-input', id="txt-input", type="text")}}<br>
+                {% for error in user_form.email.errors %}
+                    <span style="color: red;">{{ error }}</span>
+                {% endfor %}
                 <br>
-                <label style="margin-right: 3.2rem">City</label>
-                <input class="form-input" id="txt-input"  type="text" name="city" placeholder="" required>
+                <label style="margin-right: 3.2rem">City</label>{{ user_form.city(class='form-input', id="txt-input", type="text")}}<br>
+                {% for error in user_form.city.errors %}
+                    <span style="color: red;">{{ error }}</span>
+                {% endfor %}
                 <br>
-                <button type="submit" class="btn btn-outline-light" style="background-color: #e3fbf4; font-size: 20px; color: #252537">
-                    Save
-                </button>
+                {{ user_form.submit(class="btn btn-outline-light", style="background-color: #004b40; font-size: 20px; color: #edfcf5")}}
             </div>
         </div>
     </form>
 </div>
-
 {% endblock%}
