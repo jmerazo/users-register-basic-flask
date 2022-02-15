@@ -11,5 +11,3 @@ c. Ciudad.
 plano.
 
 Plus: usar SQLAlchemy como ORM en la base de datos.
-
-

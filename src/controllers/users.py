@@ -8,3 +8,6 @@ class UserController():
 
     def listUser(self):
         return userModel.listUser()
+    
+    def deleteUser(self, user):
+        userModel.deleteUser(user)

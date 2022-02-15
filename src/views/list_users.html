@@ -1,4 +1,7 @@
 {% extends 'layouts/home.html' %} {% block tittle %} List {% endblock %} {% block contents %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/list_users.css')}}">
+</head>
 <nav class="navbar navbar-expand navbar-pink bg-pink">
     <div class="container-fluid" style="background-color: #c4f6dc">
 
@@ -24,6 +27,7 @@
                 <th scope="col">Names</th>
                 <th scope="col">Email</th>
                 <th scope="col">City</th>
+                <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -33,43 +37,12 @@
                 <td>{{ u.names }}</td>
                 <td>{{ u.email }}</td>
                 <td>{{ u.city }}</td>
+                <td>
+                    <a method="POST" href="/delete/{{ u.id }}" style="margin-left: 10px" class="btn btn-danger">🗑️</a>
+                </td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
 </form>
-{% endblock %}
-
-{% block login_css %}
-
-<style type="text/css">
-    @import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
-
-    .navbar .nav-item-l:not(:last-child) {
-        margin-right: 20px;
-    }
-
-    .navbar .nav-item-m:not(:last-child) {
-        margin-right: 20px;
-    }
-
-    .navbar .nav-item-n:not(:last-child) {
-        margin-left: 790px;
-        margin-right: 18px;
-    }
-
-    body {
-        background-image: linear-gradient(-225deg, #afff6a 0%, #fbb040 100%);
-        background-image: linear-gradient(to top, #edfcf5 0%, #c4f6dc 100%);
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-
-        font-family: 'Vibur', cursive;
-        /*   the main font */
-        font-family: 'Abel', sans-serif;
-        opacity: .95;
-        /* background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%); */
-    }
-</style>
-
 {% endblock %}

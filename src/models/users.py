@@ -10,3 +10,9 @@ class UserModel():
     def listUser(self):
         data = Users.query.all()
         return data
+    
+    def deleteUser(self, user):
+        res = Users.query.filter (Users.id == user). first ()
+        print(res)
+        db.session.delete(res)
+        db.session.commit()
