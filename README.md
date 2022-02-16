@@ -10,7 +10,7 @@ Se requiere:
 Estas instrucciones le permitirán obtener una copia del proyecto en funcionamiento en la máquina local para propósitos de desarrollo y pruebas.
 - git clone https://github.com/jmerazo/users-register-basic-flask
 
-Una vez instalado python se procede con la instalación de **pipenv** el cual será utilizado como herramienta para manejar el entorno virtual:
+Una vez instalado python y luego de haber clonado el repositorio, se procede con la instalación de **pipenv** el cual será utilizado como herramienta para manejar el entorno virtual:
 - pip install pipenv
  
 Luego dentro de la carpeta del proyecto se crea el entorno virtual con el comando:
