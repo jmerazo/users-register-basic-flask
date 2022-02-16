@@ -7,11 +7,10 @@ Se requiere:
 - Pipenv.
 
 ## Instalación
-Estas instrucciones le permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
+Estas instrucciones le permitirán obtener una copia del proyecto en funcionamiento en la máquina local para propósitos de desarrollo y pruebas.
 - git clone https://github.com/jmerazo/users-register-basic-flask
 
-Para la ejecución del proyecto es necesario contar con un entorno virtual, de preferencia **pipenv**
-Una vez instalado python se procede con la instalación de **pipenv** con el siguiente comando:
+Una vez instalado python se procede con la instalación de **pipenv** el cual será utilizado como herramienta para manejar el entorno virtual:
 - pip install pipenv
  
 Luego dentro de la carpeta del proyecto se crea el entorno virtual con el comando:
