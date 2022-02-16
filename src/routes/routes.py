@@ -19,13 +19,14 @@ def createUser():
         name = user_form.name.data
         email = user_form.email.data
         city = user_form.city.data
-        validateEmail = Users.query.filter(Users.email == email).first()        
+        
+        validateEmail = userController.validateEmail(email)       
         if validateEmail == None:
             userController.createUser(name,email,city)
             logs.saveLogs(name,email,city)
             return redirect(url_for('createUser'))
         else:
-            flash('Email duplicate. Input email different')
+            flash('Email already exists')
             return redirect(url_for('createUser'))
                 
     return render_template('index.html', **context)

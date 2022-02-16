@@ -16,3 +16,7 @@ class UserModel():
         print(res)
         db.session.delete(res)
         db.session.commit()
+        
+    def validateEmail(self, email):
+        validateEmail = Users.query.filter(Users.email == email).first()
+        return validateEmail

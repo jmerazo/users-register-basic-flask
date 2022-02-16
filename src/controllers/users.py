@@ -11,3 +11,6 @@ class UserController():
     
     def deleteUser(self, user):
         userModel.deleteUser(user)
+    
+    def validateEmail(self, email):
+        return userModel.validateEmail(email)
