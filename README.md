@@ -30,8 +30,3 @@ De esta forma ya se podra acceder a la url:
 * Flask
 * SQLite
 * Python
-
-
-Development server |
-Run: python app.py |
-Route: Navigate to localhost:5000
