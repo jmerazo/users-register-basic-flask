@@ -3,6 +3,7 @@ from flask import render_template, redirect, request, url_for, flash
 from src.controllers.users import UserController
 from src.events.logs import Logs
 from src.forms.forms import UserForm
+from src.models.models import Users
 
 userController = UserController()
 
@@ -13,17 +14,20 @@ def createUser():
     context = {
         'user_form': user_form
     }    
-    
+         
     if user_form.validate_on_submit():
         name = user_form.name.data
         email = user_form.email.data
         city = user_form.city.data
-        
-        logs.saveLogs(name,email,city)
-
-        userController.createUser(name,email,city)
-        flash('Thanks for registering')
-        redirect(url_for('createUser'))
+        validateEmail = Users.query.filter(Users.email == email).first()        
+        if validateEmail == None:
+            userController.createUser(name,email,city)
+            logs.saveLogs(name,email,city)
+            return redirect(url_for('createUser'))
+        else:
+            flash('Email duplicate. Input email different')
+            return redirect(url_for('createUser'))
+                
     return render_template('index.html', **context)
     
 @app.route('/list_users', methods=['GET'])
